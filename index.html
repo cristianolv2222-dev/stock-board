@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="refresh" content="300"/>
+<title>红利低波模拟盘 · 盘后 2026-10-14</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#eef1f6;--card:#ffffff;--text:#1a2233;--muted:#69718a;--border:#e4e8f0;
+  --up:#d93026;--down:#12934f;--accent:#24466b;--topbar:#131c31;--topbar-text:#e8edf6;
+  --shadow:0 1px 2px rgba(16,24,40,.06),0 4px 16px rgba(16,24,40,.06);
+  --pill-bg:#f2f4f8;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0e1320;--card:#171f31;--text:#e7ebf4;--muted:#8b93ab;--border:#28324a;
+    --up:#f2554d;--down:#35c37d;--accent:#7fa8d9;--topbar:#0a0f1d;--topbar-text:#dbe3f0;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 18px rgba(0,0,0,.35);
+    --pill-bg:#212b42;
+  }
+}
+html{-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,"Ping Fang SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);font-size:14px;line-height:1.55;}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1;}
+.topbar{background:var(--topbar);color:var(--topbar-text);padding:14px 0;}
+.topbar-inner{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:700;letter-spacing:.3px;}
+.brand .dot{width:10px;height:10px;border-radius:3px;background:linear-gradient(135deg,#4a7ebb,#8fb4dd);display:inline-block;}
+.brand .sub{font-size:12px;font-weight:400;opacity:.65;}
+.topbar-right{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:12px;padding:3px 10px;border-radius:999px;
+  background:rgba(255,255,255,.12);color:inherit;white-space:nowrap;}
+.badge.pre{background:rgba(255,171,64,.22);color:#ffc37a;}
+.badge.post{background:rgba(94,214,138,.18);color:#7fe0a8;}
+.wrap{max-width:1100px;margin:0 auto;padding:20px 20px 48px;}
+.card{background:var(--card);border-radius:14px;box-shadow:var(--shadow);border:1px solid var(--border);}
+.hero{padding:26px 28px 20px;margin-bottom:16px;}
+.hero .label{font-size:13px;color:var(--muted);margin-bottom:6px;}
+.hero-main{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;}
+.hero-num{font-size:clamp(34px,5.5vw,46px);font-weight:700;letter-spacing:.5px;}
+.hero-chg{font-size:16px;font-weight:600;padding:4px 12px;border-radius:8px;background:var(--pill-bg);}
+.subline{display:flex;gap:22px;flex-wrap:wrap;margin-top:14px;padding-top:14px;border-top:1px dashed var(--border);}
+.subline .item .k{font-size:12px;color:var(--muted);}
+.subline .item .v{font-size:15px;font-weight:600;margin-top:1px;}
+.section{padding:18px 22px;margin-bottom:16px;}
+.section h2{font-size:15px;font-weight:700;margin-bottom:4px;}
+.section .hint{font-size:12px;color:var(--muted);margin-bottom:12px;}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:10px;}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:560px;}
+th{font-size:12px;color:var(--muted);font-weight:600;text-align:left;padding:8px 10px;border-bottom:1px solid var(--border);white-space:nowrap;background:var(--card);}
+td{padding:9px 10px;border-bottom:1px solid var(--border);white-space:nowrap;}
+tr:last-child td{border-bottom:none;}
+td.r,th.r{text-align:right;}
+tfoot td{font-weight:700;border-top:2px solid var(--border);border-bottom:none;}
+.up{color:var(--up)} .down{color:var(--down)}
+.side{font-weight:700;}
+.muted{color:var(--muted);}
+.empty{color:var(--muted);font-size:13px;padding:14px 2px;}
+.chart-img{width:100%;display:block;border-radius:10px;}
+.chart-fallback{padding:36px 0;text-align:center;color:var(--muted);font-size:13px;}
+.reb{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.reb-status{font-size:16px;font-weight:700;padding:6px 14px;border-radius:10px;background:var(--pill-bg);}
+.reb-status.done{color:var(--down);}
+.reb-status.todo{color:var(--up);}
+.reb-detail{font-size:13px;color:var(--muted);}
+.reb-detail b{color:var(--text);font-weight:600;}
+footer{max-width:1100px;margin:0 auto;padding:0 20px 28px;color:var(--muted);font-size:12px;text-align:center;}
+@media (max-width:720px){
+  body{font-size:13px}
+  .wrap{padding:14px 12px 36px}
+  .hero{padding:20px 18px 16px}
+  .subline{gap:14px}
+  th,td{padding:7px 8px;font-size:12px}
+  .section{padding:14px 14px}
+  .brand{font-size:15px}
+  .topbar-inner{padding:0 14px}
+}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner">
+  <div class="brand"><span class="dot"></span>红利低波<span class="sub">A股模拟盘 · 月度调仓</span></div>
+  <div class="topbar-right">
+    <span class="badge post">盘后</span>
+    <span class="badge" data-test="market-badge">行情截至 2026-10-14 · 5,787 只</span>
+  </div>
+</div></div>
+<div class="wrap">
+  <section class="card hero">
+    <div class="label">总资产（元）</div>
+    <div class="hero-main">
+      <div class="hero-num num">6,010,555.47</div>
+      <span class='hero-chg muted' data-test='day-change'>今日涨跌 --</span>
+    </div>
+    <div class="subline">
+      <div class="item"><div class="k">现金</div><div class="v num">1,807,592.47</div></div>
+      <div class="item"><div class="k">持仓市值</div><div class="v num">4,202,963.00</div></div>
+      <div class="item"><div class="k">持仓只数</div><div class="v num">4</div></div>
+      <div class="item"><div class="k">累计收益率</div><div class="v num up">+0.18%</div></div>
+      <div class="item"><div class="k">沪深300累计</div><div class="v num ">+0.00%</div></div>
+    </div>
+  </section>
+
+  <section class="card section">
+    <h2>净值曲线</h2>
+    <div class="hint">策略 vs 沪深300（各自归一化为 1）· 下方为水下回撤（相对历史高点）</div>
+    <div class='chart-fallback'>净值数据积累中（需至少 2 个净值点）</div>
+  </section>
+
+  <section class="card section">
+    <h2>今日成交</h2>
+    <div class='table-wrap'><table><thead><tr><th>时间</th><th>代码</th><th>名称</th><th class='r'>方向</th><th class='r'>价格</th><th class='r'>股数</th><th class='r'>费用</th><th>备注</th></tr></thead><tbody><tr><td class='muted'>09:30</td><td>600820</td><td>隧道股份</td><td class='r side up'>买入</td><td class='r num'>5.38</td><td class='r num'>195100</td><td class='r num'>262.41</td><td class='muted'></td></tr><tr><td class='muted'>09:30</td><td>600177</td><td>雅戈尔</td><td class='r side up'>买入</td><td class='r num'>8.59</td><td class='r num'>122200</td><td class='r num'>262.29</td><td class='muted'></td></tr><tr><td class='muted'>09:30</td><td>600941</td><td>中国移动</td><td class='r side up'>买入</td><td class='r num'>99.42</td><td class='r num'>10500</td><td class='r num'>260.97</td><td class='muted'></td></tr><tr><td class='muted'>09:30</td><td>000001</td><td>平安银行</td><td class='r side up'>买入</td><td class='r num'>11.58</td><td class='r num'>90600</td><td class='r num'>262.31</td><td class='muted'></td></tr></tbody></table></div>
+  </section>
+
+  <section class="card section">
+    <h2>当前持仓与个股归因</h2>
+    <div class="hint">贡献¥ =（现价 − 成本）× 股数 · 贡献% 以总资产为基准</div>
+    <div class='table-wrap'><table><thead><tr><th>代码</th><th>名称</th><th class='r'>股数</th><th class='r'>成本</th><th class='r'>现价</th><th class='r'>市值</th><th class='r'>权重%</th><th class='r'>贡献¥</th><th class='r'>贡献%</th><th class='r'>浮盈%</th><th>买入日期</th></tr></thead><tbody><tr><td>000001</td><td>平安银行</td><td class='r num'>90600</td><td class='r num'>11.581</td><td class='r num'>11.500</td><td class='r num'>1,041,900.00</td><td class='r num'>24.79%</td><td class='r num down'>-7,356.48</td><td class='r num down'>-0.12%</td><td class='r num down'>-0.70%</td><td class='r muted'>2026-10-14</td></tr><tr><td>600177</td><td>雅戈尔</td><td class='r num'>122200</td><td class='r num'>8.586</td><td class='r num'>8.580</td><td class='r num'>1,048,476.00</td><td class='r num'>24.95%</td><td class='r num down'>-689.97</td><td class='r num down'>-0.01%</td><td class='r num down'>-0.07%</td><td class='r muted'>2026-10-14</td></tr><tr><td>600820</td><td>隧道股份</td><td class='r num'>195100</td><td class='r num'>5.380</td><td class='r num'>5.420</td><td class='r num'>1,057,442.00</td><td class='r num'>25.16%</td><td class='r num up'>+7,785.09</td><td class='r num up'>0.13%</td><td class='r num up'>+0.74%</td><td class='r muted'>2026-10-14</td></tr><tr><td>600941</td><td>中国移动</td><td class='r num'>10500</td><td class='r num'>99.415</td><td class='r num'>100.490</td><td class='r num'>1,055,145.00</td><td class='r num'>25.10%</td><td class='r num up'>+11,284.10</td><td class='r num up'>0.19%</td><td class='r num up'>+1.08%</td><td class='r muted'>2026-10-14</td></tr></tbody><tfoot><tr><td>合计</td><td></td><td></td><td></td><td></td><td class='r num'>4,202,963.00</td><td class='r num'>100.00%</td><td class='r num up' data-test='contrib-total'>+11,022.73</td><td class='r num up'>0.18%</td><td></td><td></td></tr></tfoot></table></div>
+  </section>
+
+  <section class="card section">
+    <h2>调仓状态</h2>
+    <div class="reb">
+      <span class="reb-status done">本月已调仓 ✓</span>
+      <span class="reb-detail">下次调仓日 <b>2026-11-02</b>（下月首个交易日）</span>
+    </div>
+  </section>
+
+  <section class="card section">
+    <h2>历史净值</h2>
+    <div class="hint">最近 20 个交易日</div>
+    <div class='table-wrap'><table><thead><tr><th>日期</th><th class='r'>总资产</th><th class='r'>当日涨跌</th><th class='r'>累计收益率</th></tr></thead><tbody><tr><td class='num'>2026-10-14</td><td class='r num'>6,010,555.47</td><td class='r num '>--</td><td class='r num up'>+0.18%</td></tr></tbody></table></div>
+  </section>
+</div>
+<footer>生成时间 2026-10-14 17:44 · 看板日期 2026-10-14 · 完全本地生成，离线可用</footer>
+<script>
+document.querySelectorAll('.table-wrap').forEach(function(w){
+  var update=function(){w.classList.toggle('scrolled',w.scrollLeft>4);};
+  w.addEventListener('scroll',update,{passive:true});update();
+});
+</script>
+</body>
+</html>
